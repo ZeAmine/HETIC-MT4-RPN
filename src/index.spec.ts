@@ -1,17 +1,9 @@
-import isLeapYear from ".";
+import rpn from ".";
 
-test("By default, a year is NOT leap", () => {
-  expect(isLeapYear(2023)).toEqual(false);
-});
-
-test("A year is leap if it is divisible by 4", () => {
-  expect(isLeapYear(2024)).toEqual(true);
-});
-
-test("A year is NOT leap if it is divisible by 100", () => {
-  expect(isLeapYear(2100)).toEqual(false);
-});
-
-test("A year is leap if it is divisible by 400", () => {
-  expect(isLeapYear(2400)).toEqual(true);
+test("Le résultat d'une expression simple est correct", () => {
+  expect(rpn("1 1 +")).toEqual(2);
+  expect(rpn("4 3 MOD")).toEqual(1);
+  expect(rpn("1 NEGATE")).toEqual(-1);
+  expect(rpn("1 1 NEGATE +")).toEqual(0);
+  expect(rpn("5 2 * 10 -")).toEqual(0);
 });
