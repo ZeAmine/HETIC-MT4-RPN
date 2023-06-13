@@ -1,31 +1,38 @@
-function rpn(expression) {
-  const stack = [];
+import { isOperator } from "./utils/isOperator";
+import { performOperation } from "./utils/performOperation";
+
+
+export function calculateRPN(expression: string): number {
+  const tokens = expression.split(' ');
 
   const operators = {
-    "+": (a, b) => a + b,
-    "-": (a, b) => a - b,
-    "*": (a, b) => a * b,
-    "/": (a, b) => a / b,
-    MOD: (a, b) => a % b,
-    NEGATE: (a) => -a,
+    '+': (a: number, b: number) => a + b,
+    '-': (a: number, b: number) => a - b,
+    '*': (a: number, b: number) => a * b,
+    '/': (a: number, b: number) => a / b,
+    MOD: (a: number, b: number) => a % b,
+    NEGATE: (a: number) => -a,
   };
 
-  const tokens = expression.split(" ");
+  const stack: number[] = [];
 
   for (const token of tokens) {
-    if (token in operators) {
-      const operator = operators[token];
-      const operand2 = stack.pop();
-      const operand1 = stack.pop();
-      const result = operator(operand1, operand2);
-      stack.push(result);
+    if (isOperator(token)) {
+      const operation = operators[token];
+      performOperation(operation, stack);
     } else {
       const number = parseFloat(token);
+      if (isNaN(number)) {
+        throw new Error('Invalid expression');
+      }
       stack.push(number);
     }
   }
 
-  return stack.pop();
+  if (stack.length !== 1) {
+    throw new Error('Invalid expression');
+  }
+
+  return stack.pop()!;
 }
 
-export default rpn;

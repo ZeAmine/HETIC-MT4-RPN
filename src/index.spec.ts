@@ -1,9 +1,45 @@
-import rpn from ".";
+import { calculateRPN } from ".";
 
-test("Le résultat d'une expression simple est correct", () => {
-  expect(rpn("1 1 +")).toEqual(2);
-  expect(rpn("4 3 MOD")).toEqual(1);
-  expect(rpn("1 NEGATE")).toEqual(-1);
-  expect(rpn("1 1 NEGATE +")).toEqual(0);
-  expect(rpn("5 2 * 10 -")).toEqual(0);
+describe('RPN Calculator', () => {
+  test('Addition', () => {
+    expect(calculateRPN('2 3 +')).toBe(5);
+    expect(calculateRPN('4 6 +')).toBe(10);
+  });
+
+  test('Subtraction', () => {
+    expect(calculateRPN('5 3 -')).toBe(2);
+    expect(calculateRPN('8 2 -')).toBe(6);
+  });
+
+  test('Multiplication', () => {
+    expect(calculateRPN('2 3 *')).toBe(6);
+    expect(calculateRPN('4 5 *')).toBe(20);
+  });
+
+  test('Division', () => {
+    expect(calculateRPN('6 3 /')).toBe(2);
+    expect(calculateRPN('12 4 /')).toBe(3);
+  });
+
+  test('Modulo', () => {
+    expect(calculateRPN('7 3 MOD')).toBe(1);
+    expect(calculateRPN('10 4 MOD')).toBe(2);
+  });
+
+  test('Unary Negation', () => {
+    expect(calculateRPN('5 NEGATE')).toBe(-5);
+    expect(calculateRPN('-3 NEGATE')).toBe(3);
+  });
+
+  test('Complex Expression', () => {
+    expect(calculateRPN('4 2 7 - 6 2 + * +')).toBe(26);
+    expect(calculateRPN('3 10 5 + *')).toBe(45);
+  });
+
+  test('Invalid Expressions', () => {
+    expect(() => calculateRPN('1 -1 +')).toThrow(Error);
+    expect(() => calculateRPN('1 0 /')).toThrow(Error);
+    expect(() => calculateRPN('1 1 1 - /')).toThrow(Error);
+    expect(() => calculateRPN('1 1 1 1 - + /')).toThrow(Error);
+  });
 });
