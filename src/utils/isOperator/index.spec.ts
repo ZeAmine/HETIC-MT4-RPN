@@ -6,11 +6,15 @@ describe("isOperator", () => {
         expect(isOperator('+')).toBe(true);
       });
       
-      test('Invalid Operator', () => {
+      test('Invalid Operator %', () => {
         expect(isOperator('%')).toBe(false);
       });
       
-      test('Empty Operator List', () => {
+      test('Invalid Operator 1', () => {
         expect(isOperator('1')).toBe(false);
+      });
+
+      test('Undefined Operator', () => {
+        expect(() => isOperator(undefined)).toThrow();
       });
 })

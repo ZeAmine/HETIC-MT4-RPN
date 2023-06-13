@@ -1,62 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686664319124" clover="3.2.0">
-  <project timestamp="1686664319124" name="All files">
-    <metrics statements="39" coveredstatements="35" conditionals="10" coveredconditionals="6" methods="9" coveredmethods="9" elements="58" coveredelements="50" complexity="0" loc="39" ncloc="39" packages="3" files="3" classes="3"/>
+<coverage generated="1686672439025" clover="3.2.0">
+  <project timestamp="1686672439025" name="All files">
+    <metrics statements="46" coveredstatements="46" conditionals="18" coveredconditionals="18" methods="9" coveredmethods="9" elements="73" coveredelements="73" complexity="0" loc="46" ncloc="46" packages="3" files="3" classes="3"/>
     <package name="src">
-      <metrics statements="23" coveredstatements="21" conditionals="4" coveredconditionals="2" methods="7" coveredmethods="7"/>
+      <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="/Users/augustinvincent/Documents/Dev/HETIC-MT4-RPN/src/index.ts">
-        <metrics statements="23" coveredstatements="21" conditionals="4" coveredconditionals="2" methods="7" coveredmethods="7"/>
+        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="14" type="stmt"/>
-        <line num="8" count="14" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="17" count="14" type="stmt"/>
-        <line num="19" count="46" type="stmt"/>
-        <line num="20" count="46" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="17" type="stmt"/>
-        <line num="22" count="17" type="stmt"/>
-        <line num="24" count="29" type="stmt"/>
-        <line num="25" count="29" type="cond" truecount="0" falsecount="1"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="28" count="29" type="stmt"/>
-        <line num="32" count="14" type="cond" truecount="0" falsecount="1"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="36" count="14" type="stmt"/>
+        <line num="6" count="18" type="stmt"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="10" count="64" type="stmt"/>
+        <line num="11" count="64" type="stmt"/>
+        <line num="12" count="64" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="22" type="stmt"/>
+        <line num="16" count="41" type="stmt"/>
+        <line num="17" count="41" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="40" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="29" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="13" type="stmt"/>
       </file>
     </package>
     <package name="src.utils.isOperator">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="/Users/augustinvincent/Documents/Dev/HETIC-MT4-RPN/src/utils/isOperator/index.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="5" count="49" type="stmt"/>
-        <line num="6" count="49" type="stmt"/>
+        <line num="5" count="68" type="stmt"/>
+        <line num="6" count="68" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="67" type="cond" truecount="3" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="66" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="23" type="stmt"/>
+        <line num="18" count="43" type="stmt"/>
       </file>
     </package>
     <package name="src.utils.performOperation">
-      <metrics statements="13" coveredstatements="11" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="8" methods="7" coveredmethods="7"/>
       <file name="index.ts" path="/Users/augustinvincent/Documents/Dev/HETIC-MT4-RPN/src/utils/performOperation/index.ts">
-        <metrics statements="13" coveredstatements="11" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="8" methods="7" coveredmethods="7"/>
         <line num="1" count="2" type="stmt"/>
-        <line num="2" count="24" type="cond" truecount="2" falsecount="0"/>
-        <line num="3" count="21" type="stmt"/>
-        <line num="4" count="21" type="stmt"/>
-        <line num="6" count="21" type="cond" truecount="2" falsecount="1"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="10" count="21" type="stmt"/>
-        <line num="11" count="21" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="15" count="3" type="cond" truecount="0" falsecount="1"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="2" count="30" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="11" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="28" type="stmt"/>
+        <line num="17" count="28" type="stmt"/>
+        <line num="18" count="28" type="cond" truecount="3" falsecount="0"/>
         <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="25" type="cond" truecount="3" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="24" type="stmt"/>
+        <line num="27" count="24" type="stmt"/>
       </file>
     </package>
   </project>
